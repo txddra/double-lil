@@ -54,21 +54,23 @@ const Lil = () => {
     },
 
     removeFromEnd: function() {
-      let current = this.head;
+      // let current = this.head;
 
-      while (current.next.next !== null) {
-        current = current.next
-      }
+      // while (current.next.next !== null) {
+      //   current = current.next
+      // }
 
-      const toBeRemoved = current.next.value;
-      current.next = null;
-
+      const toBeRemoved = this.head.next.value;
+      // current.next = null;
+this.tail = this.tail.previous
+this.tail.next = null
       return toBeRemoved;
     },
 
     getAt: function(i) {
       if (this.head === null) {
         return null;
+
       }
 
       let count = 0;
